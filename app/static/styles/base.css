@@ -14,7 +14,8 @@
 }
 
 #background {
-  background-image: url(55.gif);
+  background-image: url(./55.gif);
+  -webkit-background-composite: border;
   opacity: 0.95;
 }
 
@@ -73,6 +74,7 @@ ul li {
 
 .collapsible {
   background-color: rgba(42, 58, 233, 0.016);
+  background-image: url(./asdsdf.png);
   color: white;
   cursor: pointer;
   padding: 18px;
@@ -85,11 +87,13 @@ ul li {
 }
 
 .active, .collapsible:hover {
+  background-image: url(./key2.gif);
   background-color: rgba(24, 12, 94, 0.441);
 }
 
 .collapsible:after {
   content: '\002B';
+  
   color: white;
   font-weight: bold;
   float: right;
@@ -109,6 +113,7 @@ ul li {
 }
 
 .guess {
+   background-image: url(./key30.gif);
     padding: 10px 5px;
     margin: auto;
     text-align: left;
@@ -122,7 +127,7 @@ ul li {
 #guesstxt
 { 
   background-image: url(./text.gif);
-    color: #ffffff;
+    color: #6de120e4;
     
     width: 173px;
     height: 56px;
