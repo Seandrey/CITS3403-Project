@@ -14,22 +14,22 @@ $(window).on('load', () => {
         content.style.maxHeight = "300px";
       }
     });
-  }
+  };
 
-  document.getElementById('rulebutton').click()
+  document.getElementById('rulebutton').click();
 
   // Initialising required constants
-  const overlay_div = document.getElementById('overlay')
-  const overlay_txt = document.getElementById('overlay-text')
+  const overlay_div = document.getElementById('overlay');
+  const overlay_txt = document.getElementById('overlay-text');
 
-  const share_div = document.getElementById('share')
-  const share_txt = document.getElementById('share-text')
+  const share_div = document.getElementById('share');
+  const share_txt = document.getElementById('share-text');
 
-  const thanks_div = document.getElementById('thanks')
-  const thanks_txt = document.getElementById('thanks-text')
+  const thanks_div = document.getElementById('thanks');
+  const thanks_txt = document.getElementById('thanks-text');
 
-  const button = document.getElementById('share-button')
-  const web_button = document.getElementById('share-website')
+  const button = document.getElementById('share-button');
+  const web_button = document.getElementById('share-website');
 
   const outcome_div = document.getElementById('outcome');
   const outcome_txt = document.getElementById('outcome-text');
@@ -43,11 +43,11 @@ $(window).on('load', () => {
   const leaderboard_div = document.getElementById('leaderboard');
   const leaderboard_txt = document.getElementById('leaderboard-text');
 
-  const base_theme = document.getElementById('base-theme')
-  const light_theme = document.getElementById('light-theme')
-  const cameron_theme = document.getElementById('cameron-theme')
-  const maaz_theme = document.getElementById('maaz-theme')
-  const date = new Date()
+  const base_theme = document.getElementById('base-theme');
+  const light_theme = document.getElementById('light-theme');
+  const cameron_theme = document.getElementById('cameron-theme');
+  const maaz_theme = document.getElementById('maaz-theme');
+  const date = new Date();
   const year = date.getFullYear();
   const month = String(date.getMonth() + 1).padStart(2, '0');
   const day = String(date.getDate()).padStart(2, '0');
@@ -62,15 +62,15 @@ $(window).on('load', () => {
   }, false);
 
   $(overlay_div).click(function() {
-    $('#overlay').fadeOut(100)
-  })
+    $('#overlay').fadeOut(100);
+  });
   overlay_txt.addEventListener("click", function(ev) {
     ev.stopPropagation();
   }, false);
 
   $(thanks_div).click(function() {
-    $('#thanks').fadeOut(100)
-  })
+    $('#thanks').fadeOut(100);
+  });
   thanks_txt.addEventListener("click", function(ev) {
     ev.stopPropagation();
   }, false);
@@ -107,23 +107,13 @@ $(window).on('load', () => {
     ev.stopPropagation();
   }, false);
 
-  const share_infotxt = document.getElementById('share-infotxt')
-  const rules_infotxt = document.getElementById('rules-infotxt')
-  const thanks_infotxt = document.getElementById('thanks-infotxt')
+  const share_infotxt = document.getElementById('share-infotxt');
+  const rules_infotxt = document.getElementById('rules-infotxt');
+  const thanks_infotxt = document.getElementById('thanks-infotxt');
 
-  const current_theme = document.getElementById('background')
+  const current_theme = document.getElementById('background');
 
   base_theme.addEventListener('click', function() {
-    current_theme.className = base_theme.id;
-    base_theme.innerHTML = 'Base Theme: Selected!';
-    light_theme.innerHTML = 'Light Theme';
-    maaz_theme.innerHTML = 'Maaz Theme';
-    cameron_theme.innerHTML = 'Cameron Theme';
-    $('#main-title').css('color', 'white');
-    $('.title').css('color', 'white');
-    $('.subtitle').css('color', 'white');
-    $('.press-button').css('background-color', 'rgb(100, 100, 100)');
-    $('.press-button').css('color', 'white');
     $("li").hover(function() {
       $(this).css('transition', 'background 0.1s');
       $(this).css("background", "rgb(39,39,39)");
@@ -131,6 +121,16 @@ $(window).on('load', () => {
     }, function() {
       $(this).css("background", "rgb(39,39,39)");
     });
+    $('#main-title').css('color', 'white');
+    $('.title').css('color', 'white');
+    $('.subtitle').css('color', 'white');
+    $('.press-button').css('background-color', 'rgb(100, 100, 100)');
+    $('.press-button').css('color', 'white');
+    current_theme.className = base_theme.id;
+    base_theme.innerHTML = 'Base Theme: Selected!';
+    light_theme.innerHTML = 'Light Theme';
+    maaz_theme.innerHTML = 'Maaz Theme';
+    cameron_theme.innerHTML = 'Cameron Theme';
     thanks_txt.className = 'base';
     overlay_txt.className = 'base';
     leaderboard_txt.className = 'base';
@@ -141,21 +141,9 @@ $(window).on('load', () => {
     share_infotxt.className = 'info-text-base';
     rules_infotxt.className = 'info-text-base';
     thanks_infotxt.className = 'info-text-base';
-
-
   });
 
   light_theme.addEventListener('click', function() {
-    current_theme.className = light_theme.id;
-    base_theme.innerHTML = 'Base Theme';
-    light_theme.innerHTML = 'Light Theme: Selected!';
-    maaz_theme.innerHTML = 'Maaz Theme';
-    cameron_theme.innerHTML = 'Cameron Theme';
-    $('#main-title').css('color', 'grey');
-    $('.title').css('color', 'grey');
-    $('.subtitle').css('color', 'grey');
-    $('.press-button').css('background-color', 'rgb(230, 230, 230)');
-    $('.press-button').css('color', 'rgb(39,39,39)');
     $("li").hover(function() {
       $(this).css('transition', 'background 0.1s');
       $(this).css("background", "rgb(200,200,200)");
@@ -163,6 +151,16 @@ $(window).on('load', () => {
     }, function() {
       $(this).css("background", "rgb(39,39,39)");
     });
+    $('#main-title').css('color', 'grey');
+    $('.title').css('color', 'grey');
+    $('.subtitle').css('color', 'grey');
+    $('.press-button').css('background-color', 'rgb(230, 230, 230)');
+    $('.press-button').css('color', 'rgb(39,39,39)');
+    current_theme.className = light_theme.id;
+    base_theme.innerHTML = 'Base Theme';
+    light_theme.innerHTML = 'Light Theme: Selected!';
+    maaz_theme.innerHTML = 'Maaz Theme';
+    cameron_theme.innerHTML = 'Cameron Theme';
     thanks_txt.className = 'light';
     overlay_txt.className = 'light';
     leaderboard_txt.className = 'light';
@@ -176,16 +174,6 @@ $(window).on('load', () => {
   });
 
   maaz_theme.addEventListener('click', function() {
-    current_theme.className = maaz_theme.id;
-    base_theme.innerHTML = 'Base Theme';
-    light_theme.innerHTML = 'Light Theme';
-    maaz_theme.innerHTML = 'Maaz Theme: Selected!';
-    cameron_theme.innerHTML = 'Cameron Theme';
-    $('#main-title').css('color', 'white');
-    $('.title').css('color', 'white');
-    $('.subtitle').css('color', 'white');
-    $('.press-button').css('background-color', 'rgb(6, 170, 0)');
-    $('.press-button').css('color', 'white');
     $("li").hover(function() {
       $(this).css('transition', 'background 0.1s');
       $(this).css("background", "rgb(1,130,40)");
@@ -193,6 +181,16 @@ $(window).on('load', () => {
     }, function() {
       $(this).css("background", "rgb(39,39,39)");
     });
+    $('#main-title').css('color', 'white');
+    $('.title').css('color', 'white');
+    $('.subtitle').css('color', 'white');
+    $('.press-button').css('background-color', 'rgb(6, 170, 0)');
+    $('.press-button').css('color', 'white');
+    current_theme.className = maaz_theme.id;
+    base_theme.innerHTML = 'Base Theme';
+    light_theme.innerHTML = 'Light Theme';
+    maaz_theme.innerHTML = 'Maaz Theme: Selected!';
+    cameron_theme.innerHTML = 'Cameron Theme';
     thanks_txt.className = 'maaz';
     overlay_txt.className = 'maaz';
     leaderboard_txt.className = 'maaz';
@@ -207,16 +205,6 @@ $(window).on('load', () => {
   });
 
   cameron_theme.addEventListener('click', function() {
-    current_theme.className = cameron_theme.id;
-    base_theme.innerHTML = 'Base Theme';
-    light_theme.innerHTML = 'Light Theme';
-    maaz_theme.innerHTML = 'Maaz Theme';
-    cameron_theme.innerHTML = 'Cameron Theme: Selected!';
-    $('#main-title').css('color', 'white');
-    $('.title').css('color', 'white');
-    $('.subtitle').css('color', 'white');
-    $('.press-button').css('background-color', 'rgb(120, 0, 122)');
-    $('.press-button').css('color', 'white');
     $("li").hover(function() {
       $(this).css('transition', 'background 0.1s');
       $(this).css("background", "linear-gradient(47deg, rgba(238,0,255,1) 0%, rgba(126,0,255,1) 100%)");
@@ -224,6 +212,16 @@ $(window).on('load', () => {
     }, function() {
       $(this).css("background", "rgb(39,39,39)");
     });
+    $('#main-title').css('color', 'white');
+    $('.title').css('color', 'white');
+    $('.subtitle').css('color', 'white');
+    $('.press-button').css('background-color', 'rgb(120, 0, 122)');
+    $('.press-button').css('color', 'white');
+    current_theme.className = cameron_theme.id;
+    base_theme.innerHTML = 'Base Theme';
+    light_theme.innerHTML = 'Light Theme';
+    maaz_theme.innerHTML = 'Maaz Theme';
+    cameron_theme.innerHTML = 'Cameron Theme: Selected!';
     thanks_txt.className = 'cameron';
     overlay_txt.className = 'cameron';
     leaderboard_txt.className = 'cameron';
@@ -252,13 +250,13 @@ $(window).on('load', () => {
     contentType: 'application/json',
     success: function(data) {
       correct_answer = data.answer;
+      correct_answer = correct_answer.toLowerCase()
       console.log(correct_answer);
     }
   })
 
   function submit() {
     var childs = document.getElementById('guess-content').lastChild;
-    console.log(childs.className);
 
     if (childs.className === 'correct-guess') {
       console.log('hahah you got it already chill')
@@ -273,7 +271,16 @@ $(window).on('load', () => {
       return NaN
     }
 
+    // Get input from user, clean it to a uniform format, and test for any common inputting errors.
     guesstxt = $(guess).val();
+    guesstxt = guesstxt.toLowerCase();
+    lettertest = guesstxt.trim();
+
+    if (lettertest.length === 0) {
+      console.log('bad guess')
+        $('#error-div').css('visibility', 'visible')
+        return (NaN)
+    }
     guessHistory += guesstxt + ':'
 
     for (char in guesstxt) {
@@ -284,8 +291,9 @@ $(window).on('load', () => {
         console.log('bad guess')
         $('#error-div').css('visibility', 'visible')
         return (NaN)
-      }
-    }
+      }; 
+      
+    };
     let correctness;
     let payload = { guess: guesstxt, correctanswer: correct_answer }
     $.ajax('/api/guessattempt', {
@@ -426,6 +434,7 @@ function onLeaderboard() {
 }
 
 // Code to create countdown timer for each new day - Will add functionality of updating fields in the future.
+// Provided by W3 Schools Countdown Timer Tutorial.
 var tomorrow = new Date()
 
 // add 1 day to today
